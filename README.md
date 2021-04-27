@@ -1,4 +1,6 @@
-# An IOS themed calculator web app using HTML, CSS and vanilla JavaScript
+# IOS Calculator
+
+An IOS themed calculator web app using HTML, CSS and vanilla JavaScript
 
 ### What Inspired me to make this project?
 
