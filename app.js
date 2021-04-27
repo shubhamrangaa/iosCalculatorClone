@@ -5,6 +5,7 @@ class Calculator {
   }
 
   clear() {
+    this.prevOperand = "";
     this.currentOperand = "";
     this.operation = undefined;
   }
@@ -13,12 +14,28 @@ class Calculator {
     if (number === "." && this.currentOperand.includes(".")) return;
     this.currentOperand += number;
   }
-  chooseOperation(operation) {}
+  chooseOperation(operation) {
+    if (this.currentOperand === "") return;
+    if (this.prevOperand !== "") {
+      compute();
+    }
+    this.operation = operation;
+    this.prevOperand = this.currentOperand;
+    this.currentOperand = "";
+  }
 
-  compute() {}
+  compute() {
+    let computation;
+    const prev = parseFloat(this.prevOperand);
+    const current = parseFloat(this.currentOperand);
+    if()
+    switch
+    
+  }
 
   updateDisplay() {
-    this.display.innerText = this.currentOperand.toString();
+    this.display.innerText =
+      this.prevOperand.toString() + this.currentOperand.toString();
   }
 }
 
@@ -48,6 +65,7 @@ equalButton.addEventListener("click", () => {
   calculator.compute();
   calculator.updateDisplay();
 });
+
 deleteButton.addEventListener("click", () => {
   calculator.clear();
   calculator.updateDisplay();
