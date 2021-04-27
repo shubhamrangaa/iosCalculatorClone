@@ -28,9 +28,6 @@ class Calculator {
     let computation;
     const prev = parseFloat(this.prevOperand);
     const current = parseFloat(this.currentOperand);
-    if()
-    switch
-    
   }
 
   updateDisplay() {
